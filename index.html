@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>About Sanjith</title>
+      <link rel="stylesheet" href="style.css" />
+      <!-- Include Font Awesome for social icons -->
+      <link rel="stylesheet" href="assets/fontawesome/css/all.min.css" />
+   </head>
+   <body>
+      <!-- Navigation -->
+      <header>
+         <nav>
+            <div class="logo">Sanjith</div>
+            <div class="menu-toggle">&#9776;</div>
+            <ul>
+               <li><a href="index.html">About</a></li>
+               <li><a href="skills.html">Skills</a></li>
+               <li><a href="experience.html">Experience</a></li>
+               <li><a href="lateiva.html">Lateiva</a></li>
+               <li><a href="tamiliva.html">Tamiliva</a></li>
+               <li><a href="graphiva.html">Graphiva</a></li>
+            </ul>
+         </nav>
+      </header>
+      <!-- Hero section -->
+      <section class="hero">
+         <div class="hero-content">
+            <h1>Hey! I'm Sanjith</h1>
+            <p>
+               I'm a Biomedical Science student, researcher and developer based in
+               Singapore. My passion lies at the intersection of biology and
+               technology, where I strive to bridge scientific discovery with
+               real‑world impact.
+            </p>
+            <a href="skills.html" class="btn-primary">Discover My Skills</a>
+         </div>
+      </section>
+      <!-- About overview -->
+      <section class="section">
+         <h2>About Me</h2>
+         <!-- Two‑column layout for photo and text -->
+         <div class="about-content">
+            <div class="about-image">
+               <img src="assets/profile.jpg" alt="Profile Photo" class="profile-photo" />
+            </div>
+            <div class="about-text">
+               <p>
+                  I am an ambitious Biomedical Science student with a strong academic
+                  record and hands‑on research experience. During my time at
+                  A*STAR’s Host–Pathogen Interaction Lab, I’ve worked with
+                  zebrafish and mice models, honed specialised injection techniques
+                  and explored immunological and microbiological assays. Through my
+                  final year project and internships I have cultivated a deep
+                  interest in translational research, focusing on understanding
+                  infectious diseases and devising practical healthcare solutions.
+               </p>
+               <p>
+                  Beyond the lab I enjoy designing intuitive digital experiences and
+                  building tools that make complex problems approachable. Whether
+                  coding mobile apps in Swift or crafting elegant web interfaces, I
+                  believe technology can amplify the reach of science and
+                  education.
+               </p>
+               <p>
+                  Explore more of my journey through the Skills and Experience
+                  sections, and feel free to reach out if you’d like to collaborate
+                  or just chat.
+               <div class="button">
+                  <a href="assets/pdfs/cv.pdf" title="CV" target="_blank" rel="noopener">
+                  <i class="fa-solid fa-file"></i>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Footer -->
+      <footer>
+         <div class="socials">
+            <a href="mailto:hello@sanjith.net" title="Email" target="_blank" rel="noopener">
+            <i class="fa-solid fa-envelope"></i>
+            </a>
+            <a href="https://github.com/Sanjith7146" title="GitHub" target="_blank" rel="noopener">
+            <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/sanjithsethu" title="LinkedIn" target="_blank" rel="noopener">
+            <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.instagram.com/sanjith7146" title="Instagram" target="_blank" rel="noopener">
+            <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://api.whatsapp.com/send/?phone=+6584226317&text=Hello%21+I+saw+your+website+and+I+would+like+to+have+a+little+chat+with+you!&app_absent=0" title="WhatsApp" target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp"></i>
+            </a>
+         </div>
+         <p>&copy; 2025 Sanjith Sethu. All rights reserved.</p>
+      </footer>
+      <!-- Hamburger menu script -->
+      <script>
+         document.addEventListener('DOMContentLoaded', function () {
+           const toggle = document.querySelector('.menu-toggle');
+           const navLinks = document.querySelector('nav ul');
+           if (toggle && navLinks) {
+             toggle.addEventListener('click', function () {
+               navLinks.classList.toggle('active');
+               // Switch between burger and close icon
+               if (navLinks.classList.contains('active')) {
+                 toggle.innerHTML = '&times;';
+               } else {
+                 toggle.innerHTML = '&#9776;';
+               }
+             });
+           }
+         });
+      </script>
+   </body>
+</html>

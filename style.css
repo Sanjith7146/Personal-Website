@@ -1,0 +1,489 @@
+/*
+ * Global styles for the updated personal website.
+ *
+ * The site follows a dark colour scheme inspired by modern developer portfolios.
+ * The palette uses a near‑black background with subtle contrasts for content cards
+ * and a vibrant accent colour for interactive elements. Text remains highly
+ * legible through the use of light greys and off‑whites. Typography leans on
+ * sans‑serif fonts to convey a contemporary and professional feel.
+ */
+
+/* Import a Google Font for a clean sans‑serif appearance */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
+/* CSS Reset and base styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  /* Use the widely adopted One Dark palette as the base for our dark theme. */
+  /* Background adopts the deep slate tone of One Dark (#282c34) for good readability */
+  background-color: #282c34;
+  /* Primary text uses the light grey from the One Dark palette (#abb2bf) */
+  color: #abb2bf;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  /* Blue accent for links based on One Dark (#61afef) */
+  color: #61afef;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  /* Green accent on hover (#98c379) */
+  color: #98c379;
+}
+
+header {
+  /* Slightly transparent header to separate it from the page content */
+  background: rgba(40, 44, 52, 0.9);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Hamburger menu toggle hidden on large screens */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #61afef;
+}
+
+nav {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+nav .logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #61afef; /* use blue accent for logo */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* Hero section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  background-image: url('assets/hero-bg.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(40, 44, 52, 0.7);
+  /* overlay to darken the image for better text contrast */
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  max-width: 800px;
+  padding: 2rem;
+  z-index: 2;
+}
+
+/* headlined hero section heading */
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto 1.5rem auto;
+  line-height: 1.5;
+}
+
+/*
+ * Primary button styling
+ * Uses a subtle gradient between the two accent colours for a more dynamic look,
+ * with a larger border radius and drop shadow. Hovering transitions the
+ * gradient direction and lifts the button slightly to mimic the original
+ * website’s interactive feel.
+ */
+.btn-primary {
+  display: inline-block;
+  padding: 0.85rem 1.7rem;
+  /* Frost gradient for call‑to‑action buttons */
+  background-image: linear-gradient(45deg, #61afef, #98c379);
+  color: #282c34;
+  border-radius: 6px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-image 0.4s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+  background-image: linear-gradient(45deg, #98c379, #61afef);
+  color: #282c34;
+}
+
+/* Section headings */
+.section {
+  padding: 4rem 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* section headings */
+.section h2 {
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+  color: #61afef;
+}
+
+.section p {
+  margin-bottom: 1rem;
+}
+
+/* Skills interactive list */
+details {
+  background: #303a46;
+  border-radius: 4px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #3e4451;
+}
+
+details summary {
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  color: #abb2bf;
+}
+
+details[open] summary::after {
+  content: '−';
+  position: absolute;
+  right: 0;
+  font-size: 1.3rem;
+  top: 0;
+  color: #61afef;
+}
+
+details summary::after {
+  content: '+';
+  position: absolute;
+  right: 0;
+  font-size: 1.3rem;
+  top: 0;
+  color: #61afef;
+}
+
+details p, details ul {
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+  color: #abb2bf;
+}
+
+/* Experience timeline */
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+  margin-top: 2rem;
+  border-left: 2px solid #61afef;
+}
+
+.timeline-entry {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+}
+
+.timeline-entry::before {
+  content: '';
+  position: absolute;
+  left: -11px;
+  top: 3px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  /* timeline markers use green fill and blue border from the One Dark palette */
+  background: #98c379;
+  border: 2px solid #61afef;
+}
+
+.timeline-entry h3 {
+  font-size: 1.3rem;
+  color: #61afef;
+  margin-bottom: 0.2rem;
+}
+
+/* company/organisation names in timeline */
+.timeline-entry h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #98c379;
+  margin-bottom: 0.2rem;
+}
+
+.timeline-entry .date {
+  font-size: 0.9rem;
+  color: #7f8792;
+  margin-bottom: 0.3rem;
+}
+
+.timeline-entry p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Education and awards cards */
+.card {
+  background: #303a46;
+  padding: 1.5rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  border: 1px solid #3e4451;
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  color: #61afef;
+  margin-bottom: 0.5rem;
+}
+
+.card h4 {
+  font-size: 1rem;
+  color: #98c379;
+  margin-bottom: 0.3rem;
+}
+
+.card ul {
+  margin-left: 1rem;
+  list-style: disc;
+}
+
+.button {
+  background: #282c34;
+}
+
+.button p {
+  font-size: 0.9rem;
+  color: #7f8792;
+}
+
+.button a {
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  /* Display icons on a card‑coloured square so the symbol itself matches the text colour */
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background: #303a46;
+  border: 1px solid #3e4451;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.button a:hover {
+  transform: translateY(-2px) scale(1.05);
+  /* On hover, slightly lighten the button */
+  background: #3e4451;
+}
+
+.button a i {
+  font-size: 1.4rem;
+  /* Use the same light grey as body text for the icons */
+  color: #abb2bf;
+}
+
+.button a:hover i {
+  color: #61afef;
+}
+
+/* Footer */
+footer {
+  background: #282c34;
+  padding: 2rem 1rem;
+  text-align: center;
+  border-top: 1px solid #3e4451;
+}
+
+footer p {
+  font-size: 0.9rem;
+  color: #7f8792;
+}
+
+footer .socials {
+  margin-bottom: 1rem;
+}
+
+footer .socials a {
+  margin: 0 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  /* Display icons on a card‑coloured square so the symbol itself matches the text colour */
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background: #303a46;
+  border: 1px solid #3e4451;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+footer .socials a:hover {
+  transform: translateY(-2px) scale(1.05);
+  /* On hover, slightly lighten the button */
+  background: #3e4451;
+}
+
+/* Style the Font Awesome icons inside the social buttons */
+footer .socials a i {
+  font-size: 1.4rem;
+  /* Use the same light grey as body text for the icons */
+  color: #abb2bf;
+}
+
+/* On hover, switch the icon colour to the blue accent for an interactive feel */
+footer .socials a:hover i {
+  color: #61afef;
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 768px) {
+  /* show hamburger icon on mobile */
+  .menu-toggle {
+    display: block;
+    z-index: 110;
+  }
+
+  /* full‑screen mobile menu */
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(40, 44, 52, 0.96);
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+    z-index: 100;
+  }
+  nav ul.active {
+    display: flex;
+  }
+  nav ul li {
+    margin: 0;
+  }
+  nav ul li a {
+    font-size: 1.5rem;
+    color: #abb2bf;
+  }
+  nav ul li {
+    margin: 0;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-image {
+    flex: none;
+    margin-bottom: 1rem;
+  }
+  .about-image img {
+    width: 140px;
+    height: 140px;
+  }
+  .timeline {
+    padding-left: 1rem;
+  }
+  .timeline-entry::before {
+    left: -8px;
+    width: 10px;
+    height: 10px;
+  }
+}
+
+/* Profile image styling */
+/* Container for profile photo on legacy pages; kept for backward compatibility */
+.profile-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Circular profile image styling */
+.profile-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #61afef;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Layout for the about section: image and text side by side */
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Constrain image container width */
+.about-image {
+  flex: 0 0 200px;
+}
+
+/* Text in the about section takes remaining space */
+.about-text {
+  flex: 1;
+}

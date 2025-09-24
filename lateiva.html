@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Lateiva</title>
+      <link rel="stylesheet" href="style.css" />
+      <!-- Include Font Awesome for social icons -->
+      <link rel="stylesheet" href="assets/fontawesome/css/all.min.css" />
+   </head>
+   <body>
+      <!-- Navigation -->
+      <header>
+         <nav>
+            <div class="logo">Sanjith</div>
+            <div class="menu-toggle">&#9776;</div>
+            <ul>
+               <li><a href="index.html">About</a></li>
+               <li><a href="skills.html">Skills</a></li>
+               <li><a href="experience.html">Experience</a></li>
+               <li><a href="lateiva.html">Lateiva</a></li>
+               <li><a href="tamiliva.html">Tamiliva</a></li>
+               <li><a href="graphiva.html">Graphiva</a></li>
+            </ul>
+         </nav>
+      </header>
+      <!-- Hero for Lateiva -->
+      <section class="section" style="text-align: center;">
+         <img src="assets/lateiva_icon.png" alt="Lateiva Icon" style="width:120px;height:120px;margin-bottom:1rem;" />
+         <h2>Lateiva</h2>
+         <p style="font-style: italic; color: #b0becd;">Never be late again.</p>
+         <p>
+            Struggling with time management? Having trouble getting out the door on
+            time because you spend too long preparing? Lateiva helps you organise
+            your daily routines so you always arrive punctually.
+         </p>
+         <a href="app.sanjith.net/lateiva" class="btn-primary" target="_blank" rel="noopener">Download Now</a>
+      </section>
+      <!-- Introducing Lateiva -->
+      <section class="section">
+         <h2>Introducing Lateiva</h2>
+         <p>
+            Lateiva allows you to create events and activity sets for tasks you need
+            to complete before leaving. For example, when going to a party you can
+            select your event, choose the relevant activity set and follow the
+            guidelines on how long to spend on each task. It’s like having a
+            personalised schedule coach in your pocket.
+         </p>
+         <h3 style="color:#61afef; margin-top:1rem;">Features</h3>
+         <ul style="margin-left:1rem; list-style: disc;">
+            <li>Create, edit and delete events with name, location and time</li>
+            <li>Build and customise activity sets for your routines</li>
+            <li>Set durations and priorities for each activity</li>
+            <li>Receive auto‑generated guidelines on how long to spend per activity</li>
+         </ul>
+      </section>
+      <!-- Role section -->
+      <section class="section">
+         <h2>My Role in the Project</h2>
+         <p>
+            Lateiva was created by Tanish, Mashal, Sanjay and myself during the
+            2021 Swift Accelerator Programme. I served as both Chief Executive
+            Officer and Chief Design Officer. As CEO I delegated tasks, organised
+            meetings and ensured our project stayed on track. As CDO I designed
+            the user interface, crafted the app’s visual identity and learnt to
+            utilise SwiftUI effectively. Through this journey I honed my
+            collaboration, leadership and research skills.
+         </p>
+      </section>
+      <!-- Footer -->
+      <footer>
+         <div class="socials">
+            <a href="mailto:hello@sanjith.net" title="Email">
+            <i class="fa-solid fa-envelope"></i>
+            </a>
+            <a href="https://github.com/Sanjith7146" title="GitHub" target="_blank" rel="noopener">
+            <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/sanjithsethu" title="LinkedIn" target="_blank" rel="noopener">
+            <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.instagram.com/sanjith7146" title="Instagram" target="_blank" rel="noopener">
+            <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://api.whatsapp.com/send/?phone=+6584226317&text=Hello%21+I+saw+your+website+and+I+would+like+to+have+a+little+chat+with+you!&app_absent=0" title="WhatsApp" target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="assets/pdfs/cv.pdf" title="CV">
+            <i class="fa-solid fa-file"></i>
+            </a>
+         </div>
+         <p>&copy; 2025 Sanjith Sethu. All rights reserved.</p>
+      </footer>
+      <!-- Hamburger menu script -->
+      <script>
+         document.addEventListener('DOMContentLoaded', function () {
+           const toggle = document.querySelector('.menu-toggle');
+           const navLinks = document.querySelector('nav ul');
+           if (toggle && navLinks) {
+             toggle.addEventListener('click', function () {
+               navLinks.classList.toggle('active');
+               if (navLinks.classList.contains('active')) {
+                 toggle.innerHTML = '&times;';
+               } else {
+                 toggle.innerHTML = '&#9776;';
+               }
+             });
+           }
+         });
+      </script>
+   </body>
+</html>
